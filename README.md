@@ -19,7 +19,7 @@
 
 
 
-![迷你数据仓库设计图](https://github.com/xzyterry/bigdata/tree/master/doc/image/迷你数据仓库设计图.png)
+![迷你数据仓库设计图](https://github.com/xzyterry/bigdata/blob/master/doc/image/迷你数据仓库设计图.png)
 
  ###  (2) 代码结构
 
@@ -65,7 +65,7 @@
 
 - 数据源
 
-![p2](https://github.com/xzyterry/bigdata/tree/master/doc/image/p2.png)
+![p2](https://github.com/xzyterry/bigdata/blob/master/doc/image/p2.png)
 
 - 数据同步
 
