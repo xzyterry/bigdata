@@ -1,0 +1,8 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  profiles:
+#        active: prod
+       active: dev
