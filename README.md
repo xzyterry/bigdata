@@ -19,7 +19,7 @@
 
 
 
-![迷你数据仓库设计图](.\doc\image\迷你数据仓库设计图.png)
+![迷你数据仓库设计图](https://github.com/xzyterry/bigdata/tree/master/doc/image/迷你数据仓库设计图.png)
 
  ###  (2) 代码结构
 
@@ -65,19 +65,19 @@
 
 - 数据源
 
-![p2](.\doc\image\p2.png)
+![p2](https://github.com/xzyterry/bigdata/tree/master/doc/image/p2.png)
 
 - 数据同步
 
-  ![p2](.\doc\image\p3.png)
+  ![p2](https://github.com/xzyterry/bigdata/blob/master/doc/image/p3.png)
 
 - 数据建模
 
-![p2](.\doc\image\p4.png)
+![p2](https://github.com/xzyterry/bigdata/blob/master/doc/image/p4.png)
 
 - 图表可视化
 
-![p2](.\doc\image\p6.png)
+![p2](https://github.com/xzyterry/bigdata/blob/master/doc/image/p6.png)
 
 
 
@@ -91,5 +91,5 @@
 
 先上个图,再慢慢整理吧
 
-![p2](.\doc\image\p5.png)
+![p2](https://github.com/xzyterry/bigdata/blob/master/doc/image/p5.png)
 
