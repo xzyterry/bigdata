@@ -1,9 +1,9 @@
-# bigdata
-目前正在整理项目中.... 先展示一下作品部分截图以及代码
+# bigdata(整理项目中....)
+ 先展示一下作品部分截图以及代码
 
 
 
-├─douyu-spark   --基于sparkstreaming+kafka的斗鱼直播热评分析的计算支持
+├─douyu-spark   --基于sparkstreaming+kafka的斗鱼直播热度分析的计算支持
 
 ├─douyu-springboot -- 后台springboot 数据及业务交互
 
@@ -13,7 +13,7 @@
 
 
 
-## 1. 基于hive的数据仓库(迷你版)(vue+springboot)
+## 1. 基于hive的数据仓库(迷你版)
 
  ### (1)迷你数据仓库目前功能规划
 
@@ -21,43 +21,63 @@
 
 ![迷你数据仓库设计图](https://github.com/xzyterry/bigdata/blob/master/doc/image/迷你数据仓库设计图.png)
 
- ###  (2) 代码结构
+ ###  (2) 技术栈
+
+1> 集群:
+
+- HadoopHA 
+
+- Hive
+
+- Spark(后面会将Hive引擎从MR换成Spark)
+
+- Azkaban 任务调度
+
+- Kafka(当前仅用于斗鱼直播热度分析) 
+
+- **DataX 阿里开源异构数据源同步框架**
+
+  
+
+目前部署架构,部分例如HBase,ES等,目前还没有用到,先部署着
 
 
 
-├─main
-│  ├─java
-│  │  └─com
-│  │      └─jawnho
-│  │          └─douyuspringboot
-│  │              ├─common
-│  │              ├─config
-│  │              │  └─datax
-│  │              │      └─Mysql2Hive
-│  │              ├─Conn
-│  │              ├─controller
-│  │              ├─dao
-│  │              ├─entity
-│  │              │  ├─dto
-│  │              │  ├─model
-│  │              │  ├─po
-│  │              │  └─vo
-│  │              ├─hive
-│  │              ├─response
-│  │              │  └─exception
-│  │              │      └─handler
-│  │              ├─schedule
-│  │              ├─service
-│  │              │  └─Impl
-│  │              ├─spark
-│  │              ├─ssh
-│  │              └─util
-│  └─resources
-└─test
-    └─java
-        └─com
-            └─jawnho
-                └─douyuspringboot
+|           | bdp-dc-002      | bdp-dc-003      | bdp-dc-004  |
+| --------- | --------------- | --------------- | ----------- |
+| Zookeeper | Zookeeper       | Zookeeper       | Zookeeper   |
+| HDFS      | NameNode        | NameNode        |             |
+|           | DataNode        | DataNode        | DataNode    |
+| YARN      | ResourceManager | ResourceManager |             |
+|           | NodeManager     | NodeManager     | NodeManager |
+| HIVE      | Hive            |                 |             |
+| Kafka     | Kafka           | Kafka           | Kafka       |
+| Spark     | Master          | Slaver          | Slaver      |
+| Hbase     | Master          | Slaver          | Slaver      |
+| Mysql     |                 | Mysql           |             |
+| Hue       | Hue             |                 |             |
+
+
+
+2>后台(Resful)
+
+- springboot
+
+- Hibernate(Mysql) 数据持久化
+
+- Quartz 定时调度框架
+
+- JSSH Java远程SSH连接服务器,并执行shell脚本
+
+  
+
+3>前端
+
+- VUE 单页面开发框架 
+- Element-ui 饿了么前端UI
+- V-chart echart 用于图表可视化
+
+
 
 
 
